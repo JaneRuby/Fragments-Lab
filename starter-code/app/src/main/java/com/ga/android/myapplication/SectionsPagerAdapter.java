@@ -17,19 +17,32 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         mPageCount = pageCount;
     }
 
+
     @Override
     public Fragment getItem(int position) {
+                Fragment fragment;
         switch (position){
-            //Complete this
+                        //Complete this
+                        case 0:
+                                fragment = new PlaceholderFragment();
+                                break;
+                        case 1:
+                                fragment = new ContactFragment();
+                                break;
+                        case 2:
+                                fragment = new AboutFragment();
+                               break;
             default: return new PlaceholderFragment();
         }
 
+        return fragment;
     }
 
     @Override
     public int getCount() {
-        // Show 3 total pages.
-        return mPageCount;
+           // Show 3 total pages.
+                     return mPageCount;
+//          return 3;
     }
 
     @Override
